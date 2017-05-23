@@ -7,6 +7,9 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+
+import static com.vamsi.myapplication.Data.imageArray;
+
 /**
  * Created by Vamsi Rao on 5/22/2017.
  */
@@ -20,7 +23,7 @@ public class ImageAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return imageArray.length;
+        return imageArray.size();
     }
 
     @Override
@@ -45,14 +48,10 @@ public class ImageAdapter extends BaseAdapter {
              else{
             imageView=(ImageView)convertView;
         }
-        imageView.setImageResource(imageArray[position]);
+        imageView.setImageResource(imageArray.get(position));
         return imageView;
     }
 
-    private Integer[] imageArray={R.drawable.head1,R.drawable.head2,
-            R.drawable.head3,R.drawable.head4,R.drawable.head5,
-            R.drawable.head6,R.drawable.head7,R.drawable.head8,
-            R.drawable.head9,R.drawable.head10,R.drawable.head11,
-            R.drawable.head12};
+
 
 }
